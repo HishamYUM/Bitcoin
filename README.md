@@ -29,6 +29,7 @@ List of features
 
 <a href="https://github.com/HishamYUM/Bitcoin/graphs/contributors">
   <img src="https://avatars3.githubusercontent.com/u/37296813?s=400&u=e3fe4eab0e61874b6de80dc4e75e4d95ec0f1e22&v=4" width="50" height="50" />
+  <img src="https://avatars.githubusercontent.com/u/74618487?v=4 width="50" height="50" />
 
 </a>
 
