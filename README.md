@@ -38,4 +38,4 @@ List of features
 </a>
 
 ## Contact
-Created by [@HishamYUM](https://www.github.com/HishamYUM) [@CHAMA-BOU](https://www.github.com/CHAMA-BOU)  - feel free to contact us!
+Created by [@HishamYUM](https://www.github.com/HishamYUM) [@CHAMA-BOU](https://www.github.com/CHAMA-BOU) [@nihal-hub](https://www.github.com/nihal-hub) [@imane-cloud](https://www.github.com/imane-cloud) - feel free to contact us!
