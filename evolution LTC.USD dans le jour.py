@@ -1,3 +1,4 @@
+######kay3ti had lcode 1BTC x7al en LTC et USD f un jour et par seconde , le resultat c un graphe +tableau 
 import os
 import numpy as np
 import pandas as pd
