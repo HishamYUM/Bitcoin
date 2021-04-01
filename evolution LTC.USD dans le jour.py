@@ -7,6 +7,7 @@ import ccxt
 import csv
 import matplotlib.pyplot as plt 
 from datetime import datetime
+#ana lpkl 5al9li 3ou9da f7yati kaymrdni dooonc convertit les fichiers en csv (voir dak lcode d conversion)
 usd = pd.read_csv('BTC-USD.csv')
 ltc = pd.read_csv('LTC-BTC.csv')
 ##BTC-USD donne 1 bitcoin combien en USD et LTC-BTC donne 1LTC en bitcoin , on fait l'oppose pour avoir 1BTC en litcoin
