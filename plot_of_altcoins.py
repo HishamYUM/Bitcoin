@@ -40,4 +40,3 @@ df.head()
 df.plot(grid=True, figsize=(15, 10))
 
 
-
