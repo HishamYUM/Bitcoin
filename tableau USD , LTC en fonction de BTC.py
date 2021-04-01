@@ -1,7 +1,0 @@
-import pandas as pd 
-usd = pd.read_csv('BTC-USD.csv')
-ltc = pd.read_csv('LTC-BTC.csv')
-##BTC-USD donne 1 bitcoin combien en USD et LTC-BTC donne 1LTC en bitcoin , on fait l'oppose pour avoir 1BTC en litcoin
-df = pd.DataFrame({'Time': usd.timestamp ,'USD': usd.close,
-                   'LTC': 1/ltc.close})
-df
