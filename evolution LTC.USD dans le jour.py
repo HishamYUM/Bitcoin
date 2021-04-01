@@ -15,7 +15,7 @@ df = pd.DataFrame({'Time': usd.timestamp ,'USD': usd.close,
 x = df.Time
 y1 =df.USD 
 y2 =df.LTC
-plt.plot(x,y1, "b-" , label = '$USD$') # Setting up legends
+plt.plot(x,y1/100, "b-" , label = '$USD/100$') # Setting up legends # s4rt dik USD bax yban lgraphe 7sn i mean les changements b7it houma s4ar bzf
 plt.plot(x,y2, "r-" ,label ='$LTC$') # Setting up legends
 plt.xlabel("TIME")
 plt.ylabel("1 BTC vaut:")
