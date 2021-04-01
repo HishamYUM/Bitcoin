@@ -18,6 +18,7 @@ plt.plot(x,y1, "b-" , label = '$USD$') # Setting up legends
 plt.plot(x,y2, "r-" ,label ='$LTC$') # Setting up legends
 plt.xlabel("TIME")
 plt.ylabel("1 BTC vaut:")
+plt.title("$Evolution $ $ BTC $ $ en $ $fonction$ $de$ $LTC$ $et$ $USD$" ,fontsize = 14)
 plt.legend()
 plt.tight_layout()
 df
