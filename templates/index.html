@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US" class="hide-scroll">
+  <head>
+    <title>Bitcoin Scraping</title>
+      <meta name="Keywords">
+      <meta name="Description">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+<!--      <link href="{{url_for('static', filename='/home/yum/websites/Bitcoin_FrontEnd/fonts.googleapis.com/css?family=Roboto|Open+Sans:200,300,400,700,800,900&amp;subset=latin')}}" rel="preload" as="font" />-->
+      <link href="{{url_for('static', filename='navbar-top-fixed.css')}}" rel="stylesheet">
+      <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+      <link rel="icon" href="{{url_for('static', filename='12233.ico')}}" type="image/icon type">
+
+
+  <script>
+      window.isAuthenticated = 0;
+      window.utmSourceFromReferrer = 0;
+      window.currentLang = '';
+      window.baseUrl = 'html-templates';
+      window.currentUrl = 'html-templates';
+    </script>
+        <style>
+              .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+            <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+        .dialog-wrapper {
+            display: none !important;
+        }
+
+        .wrap,
+        #main {
+            height: 100vh;
+            margin: 0 !important;
+        }
+
+        iframe {
+            display: none;
+        }
+
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .page-preview {
+            border-radius: 0;
+            height: 100%;
+        }
+
+        .page-preview-header {
+            background: #f2f2f2;
+            border: none;
+            height: 70px;
+            position: relative;
+            text-align: center;
+        }
+
+        .page-preview-header > a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 4px;
+        }
+
+        .page-preview-header > a:hover {
+            background: #e2f0fc;
+            text-decoration: none;
+        }
+
+        .page-preview-header > a.active {
+            background: #c9e4f9;
+        }
+
+        .page-preview-header > .close {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .page-preview-body {
+            height: calc(100% - 70px);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .page-preview-body iframe {
+            border: none;
+            display: inline-block;
+            height: 100%;
+        }
+        .container {
+  	   width: auto;
+  	   max-width: 680px;
+  	   padding: 0 15px;
+	}
+    </style>
+    <link href="{{url_for('static', filename='cover.css')}}" rel="stylesheet">
+  </head>
+
+  <body class="d-flex h-100 text-center text-white bg-dark">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#">Historical Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('Evolution')}}" target="_self" >Evolution</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Buy & Sell</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+</nav>
+
+    <div class="page-preview">
+      <div class="page-preview-body">
+        <iframe id="livePreviewFrame" src="" width="1057" height="640" style="width:100%;"></iframe>
+      </div>
+    </div>
+    <footer class="footer mt-auto  bg-dark">
+      <div class="container">
+        <span class="text-muted"><a style="position:absolute;buttom:10px;left:10px;" href="/"><img alt="yum" src="{{url_for('static', filename='mylogo.png')}}" style="border-radius:15px 20px;width:8em; height:2.5em;"></a></span>
+      </div>
+    </footer>
+  </body>
+</html>
