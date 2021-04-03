@@ -1,3 +1,4 @@
+#Visualisez les cours de clôture absolus
 from datetime import datetime
 import pickle
 import pandas as pd
@@ -24,19 +25,19 @@ def get_crypto_data(poloniex_pair):
     data_df = get_json_data(json_url, poloniex_pair)
     data_df = data_df.set_index('date')
     return data_df
-altcoins = ['ETH','LTC','XRP','ETC','STR','DASH','SC','XMR','XEM']
+altcoins = ['BTC_ETH','BTC_LTC','USDC_BTC']
 
 altcoin_data = {}
 for altcoin in altcoins:
-    coinpair = 'BTC_{}'.format(altcoin)
+    coinpair = altcoin
     crypto_price_df = get_crypto_data(coinpair)
     altcoin_data[altcoin] = crypto_price_df
-altcoin_data['ETH'].tail()
-df_eth = altcoin_data['ETH']
-df_ltc = altcoin_data['LTC']
+#altcoin_data['ETH'].tail()
+df_eth = altcoin_data['BTC_ETH']
+df_ltc = altcoin_data['BTC_LTC']
+df_btc = altcoin_data['USDC_BTC']
 df = pd.DataFrame({'ETH': df_eth.close,
-                   'LTC': df_ltc.close})
+                  'LTC': df_ltc.close,
+                  'BTC': df_btc.close})
 df.head()
 df.plot(grid=True, figsize=(15, 10))
-
-
