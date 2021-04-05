@@ -2,6 +2,8 @@
 from datetime import datetime
 import pickle
 import pandas as pd
+import plotly.offline as py
+import plotly.express as px
 def get_json_data(json_url, cache_path):
     '''Download and cache JSON data, return as a dataframe.'''
     try:        
@@ -25,19 +27,27 @@ def get_crypto_data(poloniex_pair):
     data_df = get_json_data(json_url, poloniex_pair)
     data_df = data_df.set_index('date')
     return data_df
-altcoins = ['BTC_ETH','BTC_LTC','USDC_BTC']
+altcoins = ['BTC_ETH','BTC_LTC','USDC_BTC','BTC_ETC','BTC_STR','BTC_BCH','BTC_XMR']
 
 altcoin_data = {}
 for altcoin in altcoins:
     coinpair = altcoin
     crypto_price_df = get_crypto_data(coinpair)
     altcoin_data[altcoin] = crypto_price_df
-#altcoin_data['ETH'].tail()
 df_eth = altcoin_data['BTC_ETH']
 df_ltc = altcoin_data['BTC_LTC']
-df_btc = altcoin_data['USDC_BTC']
+df_usd = altcoin_data['USDC_BTC']
+df_etc = altcoin_data['BTC_ETC']
+df_bch = altcoin_data['BTC_BCH']
+df_xmr = altcoin_data['BTC_XMR']
 df = pd.DataFrame({'ETH': df_eth.close,
                   'LTC': df_ltc.close,
-                  'BTC': df_btc.close})
-df.head()
-df.plot(grid=True, figsize=(15, 10))
+                  'usd': 1/df_usd.close,
+                  'etc': df_etc.close,
+                  'bch': df_bch.close,
+                  'xmr':df_xmr.close
+                  })
+df=df.fillna(0)
+fig = px.line(df)
+py.plot(fig)
+
