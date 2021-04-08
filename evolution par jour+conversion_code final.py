@@ -58,6 +58,7 @@ if (a==1):
     plt.title("$Evolution $ $ BTC $ $ en $ $fonction$ $de$ $LTC$ $et$ $USD$" ,fontsize = 14)
     plt.legend()
     plt.tight_layout()
+    plt.show()
     print("le tableau presentant l'evolution d'un BTC dans les 6 min prochaines \n" ,df.set_index('Time').head(6))
 elif(a==2):
         time =time.strftime('%H:%M:00', time.localtime()) 
