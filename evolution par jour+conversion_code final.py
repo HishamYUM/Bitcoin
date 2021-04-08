@@ -48,7 +48,7 @@ os.remove('LTC-BTC.csv')
 x = df.Time
 y1 =df.USD 
 y2 =df.LTC
-a = int(input("veuillez saisir le numero de l'operation voulu \n 1/voir l'evolution du bitcoin aujourd'hui\t  2/convertir une devise \n "))
+a = int(input("veuillez saisir le numero de l'operation voulue \n 1/voir l'evolution du bitcoin aujourd'hui\t  2/convertir une devise \n "))
 assert a in {1,2} ,"veuillez saisir un 1 ou un 2 !!"
 if (a==1):
     plt.plot(x,y1/100, "b-" , label = '$USD/100$') # Setting up legends
