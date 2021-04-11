@@ -1,4 +1,4 @@
-#ce code est en relation avec le code qui représente les altcoins en fonction de btc (df avec la quelle travaille ce code est pris du code de representation des altcoins) 
+#ce code est en relation avec le code qui représente les altcoins en fonction de btc (df avec la quelle travaille ce code est pris du code "plot_of_altcoins.py") 
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
