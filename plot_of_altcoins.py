@@ -1,6 +1,6 @@
 #Ce code fait la conversion des devices (ETH, LTC, BTC, XMR, ETC,BCH, USD (dollar)) en BTC
 #Les donnés sont pris du site  https://docs.poloniex.com/#returnticker
-BCH, USD (dollar)) en BTC
+
 from datetime import datetime
 import pickle
 import pandas as pd
