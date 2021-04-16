@@ -1,7 +1,20 @@
-<!DOCTYPE html>
-<html lang="en-US" class="hide-scroll">
+<!-- <!DOCTYPE html>
+<html>
 <head>
-    <title>Bitcoin Scraping</title>
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=1.0,width=device-width">
+
+    <title></title>
+    <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='12233.ico')}}" type="image/icon type">
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark">
+<div style="width:100%;height: 47%;position: absolute;bottom: 40;">
+
+</div>
+</body>
+</html>  -->
+<head>
+    <title>Evolution</title>
     <meta name="Keywords">
     <meta name="Description">
     <meta charset="utf-8">
@@ -67,7 +80,6 @@
         body {
             height: 100%;
             width: 100%;
-
         }
 
         .page-preview {
@@ -124,12 +136,11 @@
     </style>
     <link href="{{url_for('static', filename='cover.css')}}" rel="stylesheet">
 </head>
-
-<body class="d-flex h-100 text-center text-white bg-dark" style="background-image: url('https://images.unsplash.com/photo-1524673450801-b5aa9b621b76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80');background-repeat: no-repeat;background-size: 100% 132%;">
+<body class="bg-dark" style="width:100%;height:100%;">
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{url_for('home')}}" target="_self" >Home</a>
+        <a class="navbar-brand" href="{{url_for('home')}}">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -143,7 +154,7 @@
                     <a class="nav-link" aria-current="page" href="{{url_for('Evolution')}}" target="_self">Evolution</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{url_for('trading')}}" target="_self" tabindex="-1" aria-disabled="true">Buy & Sell</a>
+                    <a class="nav-link" aria-current="page" href="{{url_for('trading')}}" tabindex="-1" aria-disabled="true">Buy & Sell</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -154,14 +165,18 @@
     </div>
 
 </nav>
+<p style="color:#55ffaa;"> This is the evolution of Bitcoin since 2019:</p>
+<p style="color:#11ddb1;text-align:center">
+   <a href="{{url_for('plot_allcoins')}}" target="_self">
+       <input type="button" value="Other coins">
+   </a>
+</p>
 
+{% include "bitcoin_candlestick.html" %}
 
-
-
-<dvi class="footer mt-auto  bg-dark" style="height:27%; position: relative; bottom: 0;">
+<div style="width:100% ; position: relative;">
+<footer class="footer mt-auto  bg-dark" style="height:27%; position: absolute; bottom: 0;">
  {% include "footer.html" %}
-</dvi>
-
-
+</footer>
+</div>
 </body>
-</html>

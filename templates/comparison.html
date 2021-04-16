@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-US" class="hide-scroll">
-<head>
+
     <title>Bitcoin Scraping</title>
     <meta name="Keywords">
     <meta name="Description">
@@ -65,9 +63,8 @@
 
         html,
         body {
-            height: 100%;
+            height: 9%;
             width: 100%;
-
         }
 
         .page-preview {
@@ -123,9 +120,10 @@
 
     </style>
     <link href="{{url_for('static', filename='cover.css')}}" rel="stylesheet">
+
 </head>
 
-<body class="d-flex h-100 text-center text-white bg-dark" style="background-image: url('https://images.unsplash.com/photo-1524673450801-b5aa9b621b76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80');background-repeat: no-repeat;background-size: 100% 132%;">
+<body class="d-flex h-100 text-center text-white bg-dark">
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container-fluid">
@@ -158,10 +156,15 @@
 
 
 
-<dvi class="footer mt-auto  bg-dark" style="height:27%; position: relative; bottom: 0;">
- {% include "footer.html" %}
-</dvi>
+<div style="width:100%;height:55%;">
+    {% include "allcoins.html" %}
+</div>
+<br><br><br><br>
+    <div class="footer mt-auto  bg-black" style="height:0%;width:100%; position: absolute; bottom: 0;">
+        {% include "footer.html" %}
+    </div>
+
 
 
 </body>
-</html>
+

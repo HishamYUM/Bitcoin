@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Keywords">
+    <meta name="Description">
+    <meta charset="utf-8">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="{{url_for('static', filename='footer.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=1.0,width=device-width">
+    <link href="{{url_for('static', filename='navbar-top-fixed.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='12233.ico')}}" type="image/icon type">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title> Currency Page </title>
+</head>
+<body>
+
+    <style>
+        html, body {
+        width:100%;
+        height:100%;
+        background-color: #2A2BbA;
+        font-family: Helvetica;
+        }
+
+        .converter {
+			position: relative;
+			display: block;
+			margin: 40px auto;
+			background: #FF8966;
+			color: #fff;
+			padding: 10px 30px 30px 20px;
+			border-radius: 10px;
+			width: 400px;
+			min-height: 170px;
+			left:0px;
+        	}
+
+        .currency-information {
+        	position:relative;
+			background-color: #E5446D;
+			width: 30%;
+			color: #fff;
+			height: 15px;
+			margin: 0 auto;
+			padding: 10px 30px 30px 20px;
+			border-radius: 10px;
+			left:0px;
+        	}
+		.buySell {
+
+					width: 77%;
+
+					color: #fff;
+					left:0px;
+
+					margin: 0 auto;
+					padding: 1px 3px 3px 10px;
+					border-radius: 10px;
+					position:relative;
+
+					}
+		.daily {
+
+					width: 77%;
+
+					color: #fff;
+					left:0px;
+
+					margin: 0 auto;
+					padding: 1px 3px 3px 10px;
+					border-radius: 10px;
+					position:relative;
+
+					}
+		.middle {
+			position:absolute;
+			color: #f59300;
+			width:10px;
+			top:6%;
+			left:47%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.middle button {
+			background-color: #fff;
+			border: 2px solid #ecf0f1;
+			border-radius: 50%;
+			cursor: pointer;
+			color: #f59300;
+			font-size: 18px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 30px;
+			width: 35px;
+			transform: rotate(0deg);
+		}
+		.middle button:active {
+			transform: rotate(90deg) scale(0.9);
+		}
+
+		select {
+
+		  padding: 10px 10px;
+		  border: none;
+		  border-radius: 4px;
+		  background-color: #ddd;
+		}
+		input[type=button], input[type=submit], input[type=reset] {
+		  background-color: #4CAF50;
+		  position:absolute;
+		  border: none;
+		  left:36%;
+		  bottom:0%;
+		  color: white;
+		  padding: 13px 32px;
+		  text-decoration: none;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		  border-radius:15px;
+		}
+		.from_currencies {
+			float:center;
+			position:absolute;
+			color: #f59300;
+			width:40%;
+			top:3%;
+			left:1%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			}
+		.to_currencies {
+			float:center;
+			position:absolute;
+			color: #f59300;
+			width:39%;
+			top:3%;
+			left:60%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			}
+		input[type=number] {
+			position:absolute;
+			border-radius:10px;
+			padding:8px 1px;
+			background-color: #33bbcc;
+			height:35px;
+			width:75%;
+			bottom:40%;
+			left:12.5%;
+			}
+    </style>
+
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="{{url_for('home')}}" target="_self" >Home</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link " aria-current="page" href="{{url_for('gallery')}}" target="_self">Historical Data</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="{{url_for('Evolution')}}" target="_self">Evolution</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="{{url_for('trading')}}" target="_self" tabindex="-1" aria-disabled="true">Buy & Sell & Convert</a>
+					</li>
+				</ul>
+				<form class="d-flex">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+
+	</nav>
+
+
+
+
+     <div class="converter">
+	     <form action="{{url_for('trading')}}">
+
+			  <select class="from_currencies" name="select_currencies" id="cars" >
+
+				<option value="0">Select currency</option>
+				<option value="USD">US Dollar</option>
+				<option value="BTC">Bitcoin</option>
+				<option value="LTC">Litecoin</option>
+			  </select>
+			 <div class="middle">
+				<button id="exchange">
+					<i class="fas fa-exchange-alt"></i>
+				</button>
+				<div class="rate" id="rate"></div>
+			 </div>
+
+			 <select class="to_currencies" name="to_currency" id="cars" >
+				 <option value="0">Select currency</option>
+				<option value="USD">US Dollar</option>
+				<option value="BTC">Bitcoin</option>
+				<option value="LTC">Litecoin</option>
+			 </select>
+			 <br><br>
+		  	 <input type="number" value="0" name="amount">
+		  		<br><br>
+		  	 <input type="submit" value="Convert" style="text-align:center;">
+		</form>
+	 </div>
+
+
+     <div class="currency-information">
+		 {% if result=='None' %}
+		 <h3>{{0}}</h3>
+    	{% else %}
+		 <h3 style="color:#87ffc9; text-align:center;bottom:6px;position:relative;">{{ result }}</h3>
+    	{% endif %}
+	 </div>
+	<br><br><br><br>
+	<div class="daily">
+		{% include "evolution_per_day.html" %}
+	</div>
+	<br><br>
+	<div class="buySell">
+		{% include "buy&sell.html" %}
+	</div>
+
+	<br><br>
+
+
+
+<div class="wrapper flex-grow-1" >
+
+
+    <!-- footer -->
+    <div class="footer" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="first">
+                        <h4>Technologies</h4>
+                        <p> <a href="https://www.python.org/" target="_blank">Python</a></p>
+                        <p> <a href="https://palletsprojects.com/p/flask/" target="_blank">Flask</a> </p>
+                        <p> <a href="https://www.heroku.com/" target="_blank">Heroku</a> </p>
+                        <p> <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="second">
+                        <h4> Navigate</h4>
+                        <ul>
+                            <li><a href="{{url_for('home')}}">Home</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="third">
+                        <h4> Contact</h4>
+                        <ul>
+                            <li><i class="far fa-envelope"></i> teamamoa@inpt.ac.ma</li>
+                            <li><i class="far fa-envelope"></i> hisham.yum@gmail.com</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Rabat, Morocco </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="line"></div>
+                    <div class="second2">
+                        <a href="https://www.twitter.com/HishamYUM" target="_blank"> <i class="fab fa-twitter fa-2x margin"></i></a>
+                        <a href="https://github.com/HishamYUM/Bitcoin" target="_blank"> <i class="fab fa-github fa-2x margin"></i></a>
+                        <a href="https://www.linkedin.com/in/hishamyum" target="_blank"> <i class="fab fa-linkedin fa-2x margin"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube fa-2x margin" ></i></a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

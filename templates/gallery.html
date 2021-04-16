@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html lang="en-US" class="hide-scroll">
+
 <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='gallery.css')}}" >
+    <link rel="icon" href="{{url_for('static', filename='12233.ico')}}" type="image/icon type">
+
+
     <title>Bitcoin Scraping</title>
     <meta name="Keywords">
     <meta name="Description">
@@ -67,7 +70,6 @@
         body {
             height: 100%;
             width: 100%;
-
         }
 
         .page-preview {
@@ -125,11 +127,10 @@
     <link href="{{url_for('static', filename='cover.css')}}" rel="stylesheet">
 </head>
 
-<body class="d-flex h-100 text-center text-white bg-dark" style="background-image: url('https://images.unsplash.com/photo-1524673450801-b5aa9b621b76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80');background-repeat: no-repeat;background-size: 100% 132%;">
-
+<body class=" bg-dark">
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{url_for('home')}}" target="_self" >Home</a>
+        <a class="navbar-brand" href="{{url_for('home')}}" target="_self">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -143,7 +144,7 @@
                     <a class="nav-link" aria-current="page" href="{{url_for('Evolution')}}" target="_self">Evolution</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{url_for('trading')}}" target="_self" tabindex="-1" aria-disabled="true">Buy & Sell</a>
+                    <a class="nav-link" aria-current="page" href="#" tabindex="-1" aria-disabled="true">Buy & Sell</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -154,14 +155,53 @@
     </div>
 
 </nav>
+<div class = "gallery" >
 
+  <div class="clipped-border">
+    <a href="{{url_for('currency', curr='bitcoin')}}" target="_self"><img src="https://images.unsplash.com/photo-1608775610294-cc9a06eff61b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" id="clipped" title="Bitcoin"></a>
+  </div>
+    
+  <div class="clipped-border">
+    <a href="{{url_for('currency', curr='litecoin')}}" target="_self"><img src="https://specials-images.forbesimg.com/dam/imageserve/787180486/960x0.jpg?fit=scale" id="clipped" title="Litecoin"></a>
+  </div>
+  
+  <div class="clipped-border">
+    <a href="{{url_for('currency', curr='ethereum')}}" target="_self"><img src="https://www.thenextrex.com/wp-content/uploads/2018/01/f.png" id="clipped" title="Ethereum"></a>
+  </div>
+  
+  <div class="clipped-border">
+    <a href="{{url_for('currency', curr='xrp')}}" target="_self"><img src="https://ethereumworldnews.com/wp-content/uploads/2018/08/ripple-xrp-coinsph.jpg" id="clipped" title="XRP"></a>
+  </div>
+  
+  <div class="clipped-border">
+    <a href="{{url_for('currency', curr='syscoin')}}" target="_self"><img src="https://coinpress.fr/wp-content/uploads/2020/02/syscoin.jpg" id="clipped" title="SysCoin"></a>
+  </div>
+  
+  <div class="clipped-border">
+    <a href="{{url_for('currency', curr='cardano')}}" target="_self"><img src="https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/TOEwt0C/videoblocks-cardano-coin-ada-blockchain-cryptocurrency-3d-render_hstxxdpkm_thumbnail-1080_12.png" id="clipped" title="Cardano"></a>
+  </div>
+  
+  <div class="clipped-border">
+    <a href="{{url_for('currency', curr='vechain')}}" target="_self"><img src="https://omenics.com/images/blog/vechain-unveils-its-new-toolchain-solution-deloitte-joins-the-vechainthor-network-a037249847933898ca347db59e4e28e7.jpeg" id="clipped" title="Vechain"></a>
+  </div>
+  
+  <div class="clipped-border">
+    <a href="{{url_for('currency', curr='tron')}}" target="_self"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ybMjrjoqBaKjFO2YkN3U5wHaEW%26pid%3DApi&f=1" id="clipped" title="Tron Coin"></a>
+  </div>
+  
+  <div class="clipped-border">
+    <a href="{{url_for('currency', curr='electroneum')}}" target="_self"><img src="https://www.cryptonewsz.com/wp-content/uploads/2019/03/Electroneum-1.jpg" id="clipped" title="Electroneum"></a>
+  </div>
+  
+  <div class = "shadow"></div>
+  
+</div>
 
-
-
-<dvi class="footer mt-auto  bg-dark" style="height:27%; position: relative; bottom: 0;">
+<div style="width:100% ; position: relative;">
+<footer class="footer mt-auto  bg-dark" style="height:27%; position: absolute; bottom: 0;">
  {% include "footer.html" %}
-</dvi>
+</footer>
 
+</div>
 
 </body>
-</html>
