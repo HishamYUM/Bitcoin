@@ -17,16 +17,18 @@
       window.currentLang = '';
       window.baseUrl = 'html-templates';
       window.currentUrl = 'html-templates';
-
+    
+    
     </script>
+
     <style>
-        .bd-placeholder-img {
+      .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
-        }
+      }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
@@ -59,7 +61,13 @@
         }
 
         iframe {
-            display: none;
+            display:        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        } none;
         }
 
 
@@ -116,20 +124,21 @@
             height: 100%;
         }
         .container {
-  	   width: auto;
-  	   max-width: 0px;
-  	   padding: 0 1px;
-	}
+  	        width: auto;
+  	        max-width: 0px;
+  	        padding: 0 1px;
+	    }
 
     </style>
     <link href="{{url_for('static', filename='cover.css')}}" rel="stylesheet">
 </head>
 
-<body class="d-flex h-100 text-center text-white bg-dark" style="background-image: url('https://images.unsplash.com/photo-1524673450801-b5aa9b621b76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80');background-repeat: no-repeat;background-size: 100% 132%;">
+<body class="d-flex h-100 text-center text-white bg-dark"
+      style="background-image: url('https://images.unsplash.com/photo-1524673450801-b5aa9b621b76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80');background-repeat: no-repeat;background-size: 100% 132%;">
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{url_for('home')}}" target="_self" >Home</a>
+        <a class="navbar-brand" href="{{url_for('home')}}" target="_self">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -137,13 +146,15 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="{{url_for('gallery')}}" target="_self">Historical Data</a>
+                    <a class="nav-link " aria-current="page" href="{{url_for('gallery')}}" target="_self">Historical
+                        Data</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{url_for('Evolution')}}" target="_self">Evolution</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{url_for('trading')}}" target="_self" tabindex="-1" aria-disabled="true">Buy & Sell</a>
+                    <a class="nav-link" aria-current="page" href="{{url_for('trading')}}" target="_self" tabindex="-1"
+                       aria-disabled="true">Buy & Sell</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -156,10 +167,8 @@
 </nav>
 
 
-
-
 <dvi class="footer mt-auto  bg-dark" style="height:27%; position: relative; bottom: 0;">
- {% include "footer.html" %}
+    {% include "footer.html" %}
 </dvi>
 
 
