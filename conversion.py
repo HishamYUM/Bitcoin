@@ -62,9 +62,10 @@ def plot_evolution_garph():
     fig = go.Figure(layout=layout)
     x = df.Time
     y1 = df.USD
+   # y2 = df.LTC
 
-    fig.add_trace(go.Scatter(x=x, y=y1, name='Bitcoin'))
-
+    fig.add_trace(go.Scatter(x=x, y=y1, name='USD'))
+   #fig.add_trace(go.Scatter(x=x, y=y2 , name='litcoin'))
     fig.update_layout(
         autosize=True,
         margin=dict(l=20, r=50, t=22, b=20),
