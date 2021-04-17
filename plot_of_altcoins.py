@@ -52,8 +52,7 @@ def allcoins():
                        'USD': 1 / df_usd.close,
                        'ETC': df_etc.close,
                        'BCH': df_bch.close,
-                       'XMR': df_xmr.close
-                       })
+                       'XMR': df_xmr.close})
     df = df.fillna(0)
     fig = px.line(df)
     fig.update_layout(paper_bgcolor="#1188fc", plot_bgcolor="#111111", title={
