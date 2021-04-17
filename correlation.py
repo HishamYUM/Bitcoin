@@ -8,6 +8,8 @@ df utilise dans ce code est pris du code plot_of_altcoins.py'''
 from datetime import datetime
 import pickle
 import pandas as pd
+import plotly.offline as py
+import plotly.express as px
 def get_json_data(json_url, cache_path):
     '''Download and cache JSON data, return as a dataframe.'''
     df = pd.read_json(json_url)
@@ -53,6 +55,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 # Calculer la matrice de corrélation
 corr = df.corr()
+# Configurer la figure matplotlib
 f, ax = plt.subplots(figsize=(10, 10))
 fig = px.imshow(corr, labels=dict(x="Currency", y="Currency", color="Correlation Value"))
 # fig.show()
