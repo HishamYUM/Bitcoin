@@ -2,15 +2,12 @@
 '''Nous calculons la corrélation de Pearson entre les cours de clôture de BCH, ETH, LTC, BTC, XMR, ETC et USD. La corrélation de Pearson est une mesure de la corrélation linéaire
 entre deux variables X et Y. Elle a une valeur comprise entre +1 et −1, où 1 est la corrélation linéaire positive totale, 0 est aucune corrélation linéaire et −1 est la linéaire négative totale corrélation. 
 La matrice de corrélation est symétrique, nous ne montrons donc que la moitié inférieure.
-Sifr Data met à jour quotidiennement les corrélations Pearson pour de nombreuses crypto-monnaies.
 df utilise dans ce code est pris du code plot_of_altcoins.py'''
 
 
 from datetime import datetime
 import pickle
 import pandas as pd
-import plotly.offline as py
-import plotly.express as px
 def get_json_data(json_url, cache_path):
     '''Download and cache JSON data, return as a dataframe.'''
     df = pd.read_json(json_url)
@@ -56,12 +53,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 # Calculer la matrice de corrélation
 corr = df.corr()
-# Générer un masque pour le triangle supérieur
-mask = np.zeros_like(corr, dtype=bool)
-mask[np.triu_indices_from(mask)] = True
-# Configurer la figure matplotlib
 f, ax = plt.subplots(figsize=(10, 10))
-# Dessinez la carte thermique avec le masque et le rapport hauteur / largeur correct
 fig = px.imshow(corr, labels=dict(x="Currency", y="Currency", color="Correlation Value"))
 # fig.show()
 fig.update_layout(paper_bgcolor="#89acac", plot_bgcolor="#111111", title={
