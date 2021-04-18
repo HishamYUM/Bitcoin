@@ -35,17 +35,19 @@ def get_crypto_data(poloniex_pair):
 def allcoins():
     altcoins = ['BTC_ETH', 'BTC_LTC', 'USDC_BTC', 'BTC_ETC', 'BTC_STR', 'BTC_BCH', 'BTC_XMR']
 
-    altcoin_data = {}
+    altcoin_data = {} #création d'un dictionnaire vide 
     for altcoin in altcoins:
         coinpair = altcoin
-        crypto_price_df = get_crypto_data(coinpair)
-        altcoin_data[altcoin] = crypto_price_df
-    df_eth = altcoin_data['BTC_ETH']
+        crypto_price_df = get_crypto_data(coinpair) #Récupérer les données de crypto-monnaie de la liste altcoins du site poloniex
+        altcoin_data[altcoin] = crypto_price_df #ajouter les donnés de chaque crypto-monnaie au dictionnaire altcoin_data
+    #on affecte a df_eth la valeur du dictionnaire correspondant à la clé 'BTC_ETH' et on fait la méme chose por les autres crypto-monnaie 
+    df_eth = altcoin_data['BTC_ETH'] 
     df_ltc = altcoin_data['BTC_LTC']
     df_usd = altcoin_data['USDC_BTC']
     df_etc = altcoin_data['BTC_ETC']
     df_bch = altcoin_data['BTC_BCH']
     df_xmr = altcoin_data['BTC_XMR']
+    #Nous fusionnons les cours de clôture  ETH, LTC,USD,ETC,BCH et XMR dans une Dataframe 
     df = pd.DataFrame({'ETH': df_eth.close,
                        'LTC': df_ltc.close,
                        'USD': 1 / df_usd.close,
