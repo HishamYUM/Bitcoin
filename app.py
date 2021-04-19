@@ -12,12 +12,6 @@ from plot_of_altcoins import allcoins
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
-
-# @app.route('/trade')
-# def trade():
-#     return render_template('trade.html')
-
-
 @app.route('/')
 def home():
     return render_template('index.html')
